@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Peliculeitor</string>
+    <string name="language">es</string>
+    <string name="title_home">Películas</string>
+    <string name="title_dashboard">Series</string>
+    <string name="title_notifications">Favoritos</string>
+    <string name="genre">Género</string>
+    <string name="greeting">Hola, ¿qué te apetece ver?</string>
+    <string name="recommended">RECOMENDADAS PARA TI</string>
+    <string name="top_rate">MEJOR VALORADAS</string>
+    <string name="favorite_series_movies">Series y películas favoritas</string>
+    <string name="similar_movies">Películas similares</string>
+    <string name="release">Estreno</string>
+    <string name="watch_now">VER TRAILER</string>
+    <string name="seasons">Temporadas</string>
+    <string name="episodes">Episodios</string>
+    <string name="status">Estado</string>
+    <string name="similar_series">Series similares</string>
+    <string name="studio">Estudio</string>
+    <string name="trailer_not_found">Trailer no encontrado</string>
+</resources>
