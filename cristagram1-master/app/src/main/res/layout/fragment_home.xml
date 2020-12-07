@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.HomeFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bar"
+        android:background="?android:attr/windowBackground">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:background="?android:attr/windowBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--TODO(18): Crear un ImageView con ancho 180dp y altura 35dp, que esté alineado con el inicio de su padre, con un margen izquierdo de -20dp y que contenga el logo -->
+                <ImageView
+                    android:id="@+id/logo_home"
+                    android:layout_width="180dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="-20dp"
+                    tools:src="@drawable/logo" />
+                <!-- TODO(19): Crear un ImageView con altura y anchura ajustable, con id "inbox", que muestre drawable/ic_inbox, con id "inbox", un margen derecho de 10dp y con la propiedad alineado al final del elemento padre a true -->
+                <ImageView
+                    android:id="@+id/inbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    tools:src="@drawable/ic_inbox"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar">
+    <!-- TODO(20): Dentro de este scrollview definir un LinearLayout, que se ajuste totalmente a su anchura, pero que su altura se ajustada a su contenido y tenga orientación vertical -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <!-- TODO(21): Dentro de ese layout, definir un androidx.recyclerview.widget.RecyclerView con margen 5dp, con anchura total, ajustable en altura e id "recycle_view_story"-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/reycle_view_story"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" >
+
+            </androidx.recyclerview.widget.RecyclerView>
+        <!-- TODO(22): También dentro de ese layout, definir un androidx.recyclerview.widget.RecyclerView, con anchura total, ajustable en altura e id "recycle_view"-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- TODO(23): Crear un ProgressBasr, con altura y anchura ajustable, con id "progress_circle" y que esté centrado en el padre-->
+    <ProgressBar
+        android:id="@+id/progress_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>
